@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="De complete gaming clip inspiratie- en editgids voor stream highlights, Shorts en YouTube-clips.">
+  <title>ClipLab — Gaming Clip Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b14;--panel:#101625;--panel2:#141d2e;--line:#26334a;--text:#eef3ff;--muted:#96a4bb;--lime:#c7ff54;--cyan:#64e6ff;--pink:#ff6eaa;--radius:18px;--shadow:0 20px 70px #0006}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 80% 0%,#18304b66,transparent 42%),radial-gradient(ellipse at 0% 40%,#243d1c44,transparent 35%),linear-gradient(#080b14,#0b1020)}
+    a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:30;background:#080b14d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
+    .nav{height:72px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em;font-size:19px;margin-right:auto}
+    .brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--lime);color:#10150b;font-weight:900;box-shadow:0 0 25px #c7ff5440}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:13px;font-weight:700}.navlinks a:hover{color:var(--lime)}
+    .nav-cta,.btn{border:0;border-radius:10px;background:var(--lime);color:#10150b;font-weight:800;padding:12px 17px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+    .btn:hover,.nav-cta:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 8px 28px #c7ff5430}.btn.secondary{background:#ffffff0b;color:var(--text);border:1px solid var(--line)}.btn.small{padding:9px 12px;font-size:12px}
+    .hero{padding:88px 0 76px;position:relative}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:54px;align-items:center}
+    .eyebrow,.tag{font:11px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.13em;color:var(--lime)}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(42px,7vw,82px);line-height:.99;letter-spacing:-.075em;margin:18px 0 24px;max-width:760px}
+    h1 span{color:var(--lime)}.lead{font-size:17px;line-height:1.8;color:var(--muted);max-width:590px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-card{background:linear-gradient(145deg,#172238,#0d1422);border:1px solid #ffffff18;border-radius:24px;padding:24px;box-shadow:var(--shadow);transform:rotate(1.2deg)}
+    .screen{border-radius:14px;background:linear-gradient(135deg,#243a48,#17213b 55%,#4b2443);aspect-ratio:16/10;display:flex;align-items:end;padding:18px;position:relative;overflow:hidden}
+    .screen:before{content:"";position:absolute;width:230px;height:230px;border:1px solid #ffffff22;border-radius:50%;top:-85px;right:-35px;box-shadow:0 0 0 25px #ffffff08,0 0 0 55px #ffffff06}
+    .play{width:52px;height:52px;border-radius:50%;background:var(--lime);color:#10150b;display:grid;place-items:center;font-size:20px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+    .screen-label{font:11px "DM Mono";color:#fff;position:relative}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.stat{background:#ffffff08;border:1px solid #ffffff0d;border-radius:12px;padding:12px}.stat b{display:block;font-size:20px}.stat small{color:var(--muted);font-size:10px}
+    .ticker{border-block:1px solid var(--line);padding:14px 0;color:var(--muted);font:11px "DM Mono";letter-spacing:.13em;overflow:hidden;white-space:nowrap}.ticker span{color:var(--lime);padding:0 18px}
+    section{padding:82px 0;border-bottom:1px solid #ffffff10}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}.section-head h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.06em;margin:8px 0 0}.section-head p{max-width:470px;color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#121b2b,#0d1421);border:1px solid var(--line);border-radius:var(--radius);padding:22px;min-width:0;transition:.22s}.card:hover{border-color:#c7ff5470;transform:translateY(-3px);box-shadow:0 16px 45px #0004}.card h3{font-size:19px;letter-spacing:-.04em;margin:12px 0 8px}.card p{color:var(--muted);font-size:13px;min-height:42px}.card-top{display:flex;justify-content:space-between;align-items:center}.pill{font:10px "DM Mono";padding:6px 9px;border-radius:999px;background:#c7ff5414;color:var(--lime);border:1px solid #c7ff5430}.arrow{color:var(--lime);font-size:20px}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}.search,.select,.field{background:#0c1320;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:12px 14px;min-width:0}.search{flex:1;min-width:220px}.select{min-width:160px}.source-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.source{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:17px 18px;background:#101827;border:1px solid var(--line);border-radius:13px}.source:hover{border-color:var(--cyan)}.source strong{display:block}.source small{color:var(--muted)}.source .arrow{color:var(--cyan)}
+    .game-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.game{padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.game h3{margin:0 0 5px}.game p{font-size:12px;color:var(--muted);min-height:38px}.game a{display:inline-block;margin:4px 10px 0 0;color:var(--lime);font-size:12px;font-weight:800}
+    .workspace{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.panel h3{font-size:21px;letter-spacing:-.04em;margin-bottom:8px}.hint{font-size:12px;color:var(--muted)}
+    label{display:block;color:#b9c6d9;font-size:12px;font-weight:700;margin:14px 0 6px}.field{width:100%}textarea.field{resize:vertical;min-height:88px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}.status{font-size:12px;color:var(--lime);min-height:20px}
+    .range-wrap{padding:18px;background:#0c1320;border:1px solid var(--line);border-radius:14px;margin-top:20px}.duration{font-size:48px;font-weight:800;letter-spacing:-.07em}.duration small{font-size:14px;color:var(--muted);letter-spacing:0}.range{width:100%;accent-color:var(--lime);margin:18px 0}.meterbar{height:7px;border-radius:10px;background:linear-gradient(90deg,var(--pink) 0 28%,var(--lime) 28% 65%,var(--cyan) 65% 86%,#344052 86%)}.verdict{color:var(--muted);font-size:13px;margin:12px 0 0}
+    .checklist{list-style:none;margin:16px 0 0;padding:0}.checklist li{border-bottom:1px solid #ffffff10}.checklist label{display:flex;align-items:center;gap:12px;padding:12px 0;margin:0;cursor:pointer;font-size:13px}.checklist input{accent-color:var(--lime);width:17px;height:17px}.progress{height:6px;background:#26334a;border-radius:9px;overflow:hidden;margin-top:20px}.progress i{display:block;height:100%;width:0;background:var(--lime);transition:width .2s}.progress-label{color:var(--muted);font:11px "DM Mono";margin-top:8px}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{border-top:2px solid var(--lime);padding:17px 14px;background:linear-gradient(#121b2b,#0b111d);border-radius:0 0 12px 12px}.step b{font:11px "DM Mono";color:var(--lime)}.step h3{font-size:16px;margin:12px 0 7px}.step p{font-size:12px;color:var(--muted);margin:0}
+    footer{padding:40px 0;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-card{max-width:520px}.grid{grid-template-columns:repeat(2,1fr)}.game-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.container{width:min(100% - 28px,1160px)}.nav{height:62px}.navlinks{display:none}.hero{padding:65px 0 55px}.lead{font-size:15px}.section-head{display:block}.section-head p{margin-top:12px}.grid,.source-grid,.workspace{grid-template-columns:1fr}.game-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.card p{min-height:0}section{padding:60px 0}.hero-card{padding:15px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+  <a class="brand" href="#"><span class="brand-mark">CL</span> CLIPLAB<span style="color:var(--lime)">.</span></a>
+  <nav class="navlinks"><a href="#bronnen">Bronnen</a><a href="#games">Games</a><a href="#studio">Edit studio</a><a href="#checklist">Checklist</a></nav>
+  <a class="nav-cta" href="#studio">Start met editen ↗</a>
+</div></header>
+<main>
+  <header class="hero"><div class="container hero-grid">
+    <div><div class="eyebrow">CREATOR TOOLKIT / EDITIE 2026</div><h1>Van livestream<br>naar <span>topclip.</span></h1>
+      <p class="lead">Vind sterke gamingmomenten, ontdek hoe andere editors hun clips opbouwen en vertaal die ideeën naar strakke YouTube Shorts en highlights voor jouw creator.</p>
+      <div class="hero-actions"><a class="btn" href="#bronnen">Ontdek inspiratie ↘</a><a class="btn secondary" href="#studio">Open edit studio</a></div>
+    </div>
+    <div class="hero-card"><div class="screen"><div class="play">▶</div><div class="screen-label">STREAM MOMENT // HIGHLIGHT FOUND</div></div><div class="stats"><div class="stat"><b>03s</b><small>HOOK-TARGET</small></div><div class="stat"><b>20–45s</b><small>CLIP-RICHTLIJN</small></div><div class="stat"><b>9:16</b><small>SHORTS-FORMAAT</small></div></div></div>
+  </div></header>
+  <div class="ticker">FIND THE MOMENT <span>✳</span> CUT THE DEAD AIR <span>✳</span> BUILD THE HOOK <span>✳</span> MAKE IT HIT <span>✳</span> FIND THE MOMENT <span>✳</span> CUT THE DEAD AIR <span>✳</span></div>
+  <section id="bronnen"><div class="container">
+    <div class="section-head"><div><div class="eyebrow">01 / INSPIRATIE</div><h2>Vind clips die werken.</h2></div><p>Bekijk echte creator-clips en analyseer waarom ze werken. Gebruik de voorbeelden als inspiratie voor timing, structuur en montage — niet om ze één-op-één over te nemen.</p></div>
+    <div class="grid">
+      <article class="card"><div class="card-top"><span class="pill">FUNNY MOMENTS</span><span class="arrow">↗</span></div><h3>CaseOh Moments</h3><p>Bekijk humor, reacties en sterke punchlines uit gamingstreams.</p><a class="btn small" href="https://gridvids.com/caseoh-moments" target="_blank" rel="noopener">Bekijk clips ↗</a></article>
+      <article class="card"><div class="card-top"><span class="pill">TWITCH CLIPS</span><span class="arrow">↗</span></div><h3>ClipsFinder</h3><p>Ontdek korte Twitch-momenten en let op de opbouw richting het hoogtepunt.</p><a class="btn small" href="https://clipsfinder.com/" target="_blank" rel="noopener">Open ClipsFinder ↗</a></article>
+      <article class="card"><div class="card-top"><span class="pill">LIVESTREAM FAILS</span><span class="arrow">↗</span></div><h3>LivestreamFails</h3><p>Bekijk onverwachte momenten, fails en reacties uit livestreams.</p><a class="btn small" href="https://livestreamfails.com/" target="_blank" rel="noopener">Bekijk fails ↗</a></article>
+    </div>
+    <div style="margin-top:48px"><div class="section-head"><div><div class="eyebrow">MEER PLATFORMS</div><h2 style="font-size:30px">Meer plekken om te zoeken</h2></div></div>
+      <div class="toolbar"><input id="sourceSearch" class="search" type="search" placeholder="Zoek een platform of type clip..." aria-label="Zoek bronnen"><select id="sourceType" class="select" aria-label="Filter bronnen"><option value="all">Alle categorieën</option><option value="shorts">Short-form</option><option value="community">Community</option><option value="platform">Clipplatform</option></select></div>
+      <div class="source-grid" id="sourceGrid">
+        <a class="source" data-type="platform" data-search="twitch clips livestream gaming" href="https://www.twitch.tv/directory" target="_blank" rel="noopener"><span><strong>Twitch Clips & Directory</strong><small>Clips per game en streamer</small></span><span class="arrow">↗</span></a>
+        <a class="source" data-type="shorts" data-search="youtube shorts gaming" href="https://www.youtube.com/shorts" target="_blank" rel="noopener"><span><strong>YouTube Shorts</strong><small>Hooks, ondertitels en tempo</small></span><span class="arrow">↗</span></a>
+        <a class="source" data-type="shorts" data-search="tiktok gamingclips streamerclips" href="https://www.tiktok.com/tag/gamingclips" target="_blank" rel="noopener"><span><strong>TikTok #gamingclips</strong><small>Trends en snelle montage</small></span><span class="arrow">↗</span></a>
+        <a class="source" data-type="community" data-search="reddit livestreamfail twitch" href="https://www.reddit.com/r/LivestreamFail/" target="_blank" rel="noopener"><span><strong>Reddit / LivestreamFail</strong><small>Populaire streammomenten</small></span><span class="arrow">↗</span></a>
+        <a class="source" data-type="platform" data-search="kick clips streamers" href="https://kick.com/" target="_blank" rel="noopener"><span><strong>Kick</strong><small>Streamers en highlights</small></span><span class="arrow">↗</span></a>
+        <a class="source" data-type="platform" data-search="medal gaming clips" href="https://medal.tv/" target="_blank" rel="noopener"><span><strong>Medal.tv</strong><small>Gamingclips per game</small></span><span class="arrow">↗</span></a>
+        <a class="source" data-type="community" data-search="twitch reddit gaming clips" href="https://www.reddit.com/r/Twitch/" target="_blank" rel="noopener"><span><strong>Reddit / Twitch</strong><small>Discussies en gedeelde clips</small></span><span class="arrow">↗</span></a>
+        <a class="source" data-type="platform" data-search="streamable video clips" href="https://streamable.com/" target="_blank" rel="noopener"><span><strong>Streamable</strong><small>Video's gedeeld vanuit communities</small></span><span class="arrow">↗</span></a>
+      </div><p id="emptySources" class="hint" hidden>Geen bronnen gevonden. Probeer een andere zoekterm.</p>
+    </div>
+  </div></section>
+  <section id="games"><div class="container"><div class="section-head"><div><div class="eyebrow">02 / GAME SEARCH</div><h2>Zoek per game.</h2></div><p>Klik door naar gerichte zoekresultaten. Vervang de game door de game die jouw YouTuber op dat moment speelt.</p></div>
+    <div class="game-grid">
+      <article class="game"><h3>🎮 Minecraft</h3><p>Fails, clutch-momenten, builds en onverwachte reacties.</p><a href="https://www.youtube.com/results?search_query=minecraft+streamer+clips+shorts" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.twitch.tv/directory/category/minecraft" target="_blank" rel="noopener">Twitch ↗</a></article>
+      <article class="game"><h3>🎯 Fortnite</h3><p>Clutches, wins, funny moments en rage-reacties.</p><a href="https://www.youtube.com/results?search_query=fortnite+streamer+clips+shorts" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.twitch.tv/directory/category/fortnite" target="_blank" rel="noopener">Twitch ↗</a></article>
+      <article class="game"><h3>🚗 GTA 5</h3><p>Roleplay, chaos, onverwachte situaties en dialogen.</p><a href="https://www.youtube.com/results?search_query=gta+5+streamer+clips+shorts" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.twitch.tv/directory/category/grand-theft-auto-v" target="_blank" rel="noopener">Twitch ↗</a></article>
+      <article class="game"><h3>🧱 Roblox</h3><p>Challenges, jumpscares, grappige bugs en reacties.</p><a href="https://www.youtube.com/results?search_query=roblox+streamer+clips+shorts" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.twitch.tv/directory/category/roblox" target="_blank" rel="noopener">Twitch ↗</a></article>
+    </div>
+  </div></section>
+  <section id="studio"><div class="container"><div class="section-head"><div><div class="eyebrow">03 / EDIT STUDIO</div><h2>Maak van kijken een plan.</h2></div><p>Bewaar je observaties lokaal in deze browser en kopieer ze naar je editnotities. Je gegevens worden niet naar een server verstuurd.</p></div>
+    <div class="workspace">
+      <div class="panel"><h3>Clip-analyse</h3><p class="hint">Vul dit in terwijl je een voorbeeldclip bekijkt.</p>
+        <label for="clipUrl">Link naar voorbeeldclip</label><input class="field" id="clipUrl" placeholder="https://...">
+        <label for="creator">Game / streamer</label><input class="field" id="creator" placeholder="Bijv. Fortnite / streamer">
+        <label for="hook">Wat gebeurt er in de eerste 3 seconden?</label><textarea class="field" id="hook" placeholder="Welke vraag, actie of reactie trekt je aandacht?"></textarea>
+        <label for="cut">Waar zit het beste knippunt?</label><textarea class="field" id="cut" placeholder="Waar begint het moment en waar stop je?"></textarea>
+        <label for="editStyle">Welke edit-elementen vallen op?</label><textarea class="field" id="editStyle" placeholder="Ondertitels, zoom, sound design, pacing..."></textarea>
+        <label for="takeaway">Wat neem je mee naar je eigen edit?</label><textarea class="field" id="takeaway" placeholder="Beschrijf de aanpak, niet het kopiëren van de clip."></textarea>
+        <div class="row"><button class="btn" id="copyNotes">Kopieer analyse ⧉</button><button class="btn secondary" id="clearNotes">Wissen</button></div><div class="status" id="notesStatus" aria-live="polite"></div>
+      </div>
+      <div class="panel"><h3>Lengte & timing</h3><p class="hint">Gebruik de meter als richtlijn; het verhaal bepaalt de uiteindelijke lengte.</p>
+        <div class="range-wrap"><div class="duration"><span id="seconds">32</span><small> seconden</small></div><input class="range" id="duration" type="range" min="5" max="60" value="32" aria-label="Clipduur in seconden"><div class="meterbar"></div><p class="verdict" id="durationText">20–45 seconden: een bruikbaar startpunt voor een compacte highlight.</p></div>
+        <div style="margin-top:28px"><h3>De edit-flow</h3><div class="steps" style="grid-template-columns:1fr 1fr">
+          <div class="step"><b>01</b><h3>Selecteer</h3><p>Markeer het sterkste moment in de stream.</p></div><div class="step"><b>02</b><h3>Trim</h3><p>Haal onnodige stiltes en omwegen weg.</p></div><div class="step"><b>03</b><h3>Versterk</h3><p>Gebruik tekst, zoom en geluid bewust.</p></div><div class="step"><b>04</b><h3>Check</h3><p>Bekijk of de context nog duidelijk is.</p></div>
+        </div></div>
+      </div>
+    </div>
+  </div></section>
+  <section id="checklist"><div class="container"><div class="section-head"><div><div class="eyebrow">04 / EXPORT CHECK</div><h2>Check vóór export.</h2></div><p>Vink de punten af. De voortgang wordt op dit apparaat bewaard.</p></div>
+    <div class="workspace"><div class="panel"><h3>Checklist</h3><ul class="checklist" id="checks">
+      <li><label><input type="checkbox"> De eerste seconden maken nieuwsgierig.</label></li>
+      <li><label><input type="checkbox"> De context is begrijpelijk zonder de hele livestream.</label></li>
+      <li><label><input type="checkbox"> Stiltes en onnodige stukken zijn verwijderd.</label></li>
+      <li><label><input type="checkbox"> Ondertitels zijn leesbaar en goed getimed.</label></li>
+      <li><label><input type="checkbox"> Zooms en geluidseffecten ondersteunen het moment.</label></li>
+      <li><label><input type="checkbox"> De clip eindigt op een sterk moment.</label></li>
+      <li><label><input type="checkbox"> Beeldformaat, audio en export zijn gecontroleerd.</label></li>
+    </ul><div class="progress"><i id="progressBar"></i></div><div class="progress-label" id="progressText">0 / 7 afgerond</div></div>
+      <div class="panel"><h3>Profiel van jouw creator</h3><p class="hint">Bewaar de vaste stijlrichtlijnen voor je edits.</p>
+        <label for="creatorName">YouTuber / kanaal</label><input class="field" id="creatorName" placeholder="Naam van het kanaal">
+        <label for="gameName">Game(s)</label><input class="field" id="gameName" placeholder="Welke games?">
+        <label for="style">Gewenste stijl</label><textarea class="field" id="style" placeholder="Bijv. snel, humoristisch, captions in beeld..."></textarea>
+        <label for="target">Doellengte / platform</label><input class="field" id="target" placeholder="Bijv. 30–45 sec / YouTube Shorts">
+        <div class="row"><button class="btn" id="copyProfile">Kopieer profiel ⧉</button><span class="status" id="profileStatus" aria-live="polite"></span></div>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer><div class="container footer-row"><span><b style="color:var(--text)">CLIPLAB.</b> Gaming Clip Studio · Inspiratiegids</span><span>Gebruik voorbeelden als inspiratie. Respecteer auteursrecht en vraag toestemming voor hergebruik.</span></div></footer>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const safeStore = {
+    get(k, fallback=''){try{return localStorage.getItem('cliplab-'+k) ?? fallback}catch{return fallback}},
+    set(k,v){try{localStorage.setItem('cliplab-'+k,v)}catch{}}
+  };
+  // Filter the inspiration directory.
+  const search = $('sourceSearch'), type = $('sourceType'), sources = [...document.querySelectorAll('.source')];
+  function filterSources(){
+    const q=search.value.trim().toLowerCase(), t=type.value; let visible=0;
+    sources.forEach(el=>{const ok=(t==='all'||el.dataset.type===t)&&el.dataset.search.includes(q);el.hidden=!ok;if(ok)visible++});
+    $('emptySources').hidden=visible!==0;
+  }
+  search.addEventListener('input',filterSources);type.addEventListener('change',filterSources);
+  // Save and restore the editor workspace locally.
+  const fields=['clipUrl','creator','hook','cut','editStyle','takeaway','creatorName','gameName','style','target'];
+  fields.forEach(id=>{const el=$(id);el.value=safeStore.get(id);el.addEventListener('input',()=>safeStore.set(id,el.value))});
+  function noteText(ids){return ids.map(id=>$(id).labels?.[0]?.textContent?.trim() || id).join('')}
+  async function copyText(value,status){
+    try{await navigator.clipboard.writeText(value);status.textContent='Gekopieerd naar je klembord.'}
+    catch{status.textContent='Kopiëren niet beschikbaar. Selecteer en kopieer de tekst handmatig.'}
+  }
+  $('copyNotes').addEventListener('click',()=>copyText(
+    ['CLIP-ANALYSE',`Link: ${$('clipUrl').value}`,`Game / streamer: ${$('creator').value}`,`Hook: ${$('hook').value}`,`Knippunt: ${$('cut').value}`,`Edit: ${$('editStyle').value}`,`Meenemen: ${$('takeaway').value}`].join('\n'),
+    $('notesStatus')));
+  $('clearNotes').addEventListener('click',()=>{['clipUrl','creator','hook','cut','editStyle','takeaway'].forEach(id=>{$(id).value='';safeStore.set(id,'')});$('notesStatus').textContent='Analyse gewist.'});
+  $('copyProfile').addEventListener('click',()=>copyText(
+    ['CREATOR-PROFIEL',`Kanaal: ${$('creatorName').value}`,`Games: ${$('gameName').value}`,`Stijl: ${$('style').value}`,`Doel: ${$('target').value}`].join('\n'),$('profileStatus')));
+  // Duration guidance.
+  const range=$('duration');
+  function updateDuration(){const n=Number(range.value);$('seconds').textContent=n;
+    $('durationText').textContent=n<20?'Kort format: werkt vooral als het moment meteen duidelijk is.':n<=45?'20–45 seconden: een bruikbaar startpunt voor een compacte highlight.':n<=60?'45–60 seconden: houd het tempo hoog en laat elk stukje context iets toevoegen.':'';
+  }
+  range.addEventListener('input',updateDuration);updateDuration();
+  // Persistent checklist.
+  const checks=[...$('checks').querySelectorAll('input')];
+  checks.forEach((el,i)=>{el.checked=safeStore.get('check-'+i)==='1';el.addEventListener('change',()=>{safeStore.set('check-'+i,el.checked?'1':'0');updateProgress()})});
+  function updateProgress(){const count=checks.filter(x=>x.checked).length;$('progressBar').style.width=(count/checks.length*100)+'%';$('progressText').textContent=`${count} / ${checks.length} afgerond`+(count===checks.length?' — klaar voor export!':'')}
+  updateProgress();
+})();
+</script>
+</body>
+</html>
