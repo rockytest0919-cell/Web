@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>De Ultieme Gaming-Clip Inspiratiegids</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090c18;--bg2:#10142a;--card:#141935;--ivory:#f3ebdb;--mute:#a9a79f;--gold:#cfae6b;--gold2:#f0d9a0;--wine:#5b1630;--line:rgba(207,174,107,.28);
+--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px;height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ivory);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--gold2);text-decoration:none;border-bottom:1px solid var(--line);transition:.25s}
+a:hover,a:focus-visible{color:#fff;border-color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.05;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,12,24,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;gap:26px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav b{font:500 1.25rem var(--serif);color:var(--gold2);margin-right:auto;letter-spacing:.04em}
+nav a{border:0;font-size:.88rem;color:var(--mute)}nav a:hover{color:var(--gold2)}
+.hero{min-height:92vh;display:grid;align-items:center;position:relative;overflow:hidden;padding:90px 0 70px;background:radial-gradient(60% 50% at 78% 20%,rgba(91,22,48,.55),transparent 70%),radial-gradient(50% 40% at 10% 90%,rgba(207,174,107,.12),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:-20% auto -20% -40%;width:30%;background:linear-gradient(100deg,transparent,rgba(240,217,160,.12),transparent);transform:skewX(-18deg);animation:sweep 7s ease-in-out 1s 1 forwards}
+@keyframes sweep{to{left:130%}}
+.hero h1{font-size:clamp(3rem,10vw,8.2rem);font-weight:300;letter-spacing:-.01em;max-width:11ch}
+.hero h1 em{font-style:italic;color:var(--gold2);font-weight:300}
+.hero p.lead{max-width:46ch;color:var(--mute);font-size:1.15rem;margin:28px 0 38px}
+.btn{display:inline-block;padding:15px 34px;border:1px solid var(--gold);color:var(--gold2);font-size:.95rem;letter-spacing:.06em;background:linear-gradient(135deg,rgba(207,174,107,.16),transparent);transition:.3s}
+.btn:hover{background:var(--gold);color:#1a1405}
+.strip{margin-top:64px;max-width:620px}
+.strip .bar{position:relative;height:46px;border:1px solid var(--line);background:var(--bg2)}
+.strip .hookz{position:absolute;inset:0 auto 0 0;width:5%;background:linear-gradient(90deg,var(--gold),var(--gold2));animation:grow 2.4s .6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes grow{from{width:0}to{width:5%}}
+.strip .ticks{display:flex;justify-content:space-between;font-size:.78rem;color:var(--mute);margin-top:8px}
+section{padding:110px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(2.2rem,5.5vw,4.2rem);margin-bottom:18px}
+.sub{color:var(--mute);max-width:56ch;margin:0 0 54px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.pillars div{background:var(--bg);padding:42px 32px}
+.pillars h3{font-size:2rem;color:var(--gold2);margin-bottom:10px}
+.pillars p{margin:0;color:var(--mute)}
+.quote{font:italic 300 clamp(1.5rem,3.4vw,2.4rem)/1.3 var(--serif);max-width:30ch;margin:70px 0 0;color:var(--ivory);border-left:2px solid var(--gold);padding-left:28px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px}
+.fc{position:relative;padding:38px 32px 34px;background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;min-height:290px}
+.fc::before{content:"";position:absolute;inset:8px;border:1px solid rgba(207,174,107,.1);pointer-events:none}
+.fc h3{font-size:1.8rem}.fc .tag{color:var(--gold);font-size:.85rem}
+.fc p{margin:0;color:var(--mute);flex:1}
+.fc a.btn{align-self:flex-start;border-bottom:1px solid var(--gold);padding:11px 24px}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));margin-top:70px;border-top:1px solid var(--line)}
+.more article{padding:34px 28px 34px 0;border-bottom:1px solid var(--line)}
+.more h3{font-size:1.7rem;color:var(--gold2)}
+.more p{color:var(--mute);margin:8px 0 12px;font-size:.98rem}
+.more .l a{margin-right:14px;font-size:.92rem;display:inline-block}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.tabs button,.chip{font:400 .95rem var(--sans);color:var(--ivory);background:transparent;border:1px solid var(--line);padding:12px 26px;cursor:pointer;transition:.25s}
+.tabs button[aria-selected=true]{background:var(--gold);color:#1a1405;border-color:var(--gold)}
+.tabs button:hover{border-color:var(--gold2)}
+.panel{padding:40px;border:1px solid var(--line);background:var(--card);display:none;gap:22px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.panel.on{display:flex;animation:fade .45s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.panel h3{font-size:2.6rem}.panel .acts{display:flex;gap:14px;flex-wrap:wrap}
+.four{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;margin-bottom:70px}
+.four h3{font-size:1.9rem;color:var(--gold2);border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}
+.four p{margin:0;color:var(--mute)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.box{border:1px solid var(--line);background:var(--card);padding:36px}
+.box h3{font-size:2rem;margin-bottom:18px}
+label{display:block;font-size:.88rem;color:var(--gold);margin:14px 0 4px}
+input,textarea{width:100%;background:var(--bg);border:0;border-bottom:1px solid var(--line);color:var(--ivory);font:300 1rem var(--sans);padding:10px 2px;border-radius:0}
+input:focus,textarea:focus{outline:0;border-color:var(--gold2)}
+textarea{resize:vertical;min-height:70px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px}
+.note{font-size:.88rem;color:var(--mute);min-height:1.4em}
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s;border-left:1px solid var(--gold);margin-left:14px}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 38px 46px}
+ol.steps li::before{content:counter(s);position:absolute;left:-15px;top:0;width:29px;height:29px;border-radius:50%;background:var(--bg);border:1px solid var(--gold);color:var(--gold2);font:500 1rem/27px var(--serif);text-align:center}
+ol.steps h3{font-size:1.8rem;margin-bottom:4px}ol.steps p{margin:0;color:var(--mute);max-width:56ch}
+.chk{list-style:none;padding:0;margin:0}
+.chk li{border-bottom:1px solid var(--line)}
+.chk label{display:flex;gap:16px;align-items:center;margin:0;padding:16px 0;color:var(--ivory);font-size:1rem;cursor:pointer}
+.chk input{appearance:none;-webkit-appearance:none;width:24px;height:24px;padding:0;border:1px solid var(--gold);flex:none;display:grid;place-content:center;background:transparent}
+.chk input::after{content:"";width:12px;height:12px;background:var(--gold2);transform:scale(0);transition:.2s}
+.chk input:checked::after{transform:scale(1)}
+.chk input:checked+span{color:var(--mute);text-decoration:line-through;text-decoration-color:var(--gold)}
+.prog{height:3px;background:var(--line);margin:22px 0 6px}.prog i{display:block;height:100%;width:0;background:var(--gold2);transition:width .4s}
+.meter{font:300 3.6rem/1 var(--serif);color:var(--gold2);margin:6px 0}
+input[type=range]{padding:0;border:0;accent-color:var(--gold);height:30px}
+.zones{display:flex;height:6px;margin:4px 0 14px}.zones i{display:block}
+.know{columns:2 320px;column-gap:50px;color:var(--mute)}
+.know p{margin:0 0 20px;break-inside:avoid}
+footer{padding:80px 0 50px;border-top:1px solid var(--line);text-align:center;color:var(--mute);font-size:.9rem}
+footer b{display:block;font:italic 300 2rem var(--serif);color:var(--gold2);margin-bottom:8px}
+@media (max-width:600px){section{padding:76px 0}.panel,.box{padding:26px}.more article{padding-right:0}}
+::selection{background:var(--gold);color:#1a1405}html{scrollbar-color:var(--gold) var(--bg)}body::before{content:'';position:fixed;inset:8px;border:1px solid rgba(207,174,107,.25);pointer-events:none;z-index:40}body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9 0 0 0 0 .7 0 0 0 .7 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;pointer-events:none;animation:gone .01s 2.9s forwards}.intro i{position:absolute;top:0;bottom:0;width:50.4%;background:linear-gradient(180deg,#1b0a22,#090c18);animation:op 1.3s 1.5s cubic-bezier(.76,0,.24,1) forwards}.intro i:first-child{left:0;border-right:1px solid var(--gold)}.intro i:nth-child(2){right:0;border-left:1px solid var(--gold);animation-name:op2}.intro span{position:relative;font:300 clamp(4rem,16vw,9rem)/1 var(--serif);color:var(--gold2);animation:mn 2.3s ease forwards}@keyframes op{to{transform:translateX(-101%)}}@keyframes op2{to{transform:translateX(101%)}}@keyframes mn{0%{opacity:0;letter-spacing:.35em}35%,65%{opacity:1;letter-spacing:.05em}100%{opacity:0}}@keyframes gone{to{visibility:hidden}}
+#sp{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:linear-gradient(90deg,var(--gold),var(--gold2))}nav b{display:flex;align-items:center;gap:12px;letter-spacing:.08em}.mono{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);font:500 .85rem var(--serif);letter-spacing:0}
+.hero .wrap{position:relative;z-index:2}.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(207,174,107,.07) 0 1px,transparent 1px 120px);-webkit-mask-image:linear-gradient(#000,transparent 90%);mask-image:linear-gradient(#000,transparent 90%)}.hero::after{animation-delay:3s}.strip .hookz{animation-delay:3s}#dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.hero h1{background:linear-gradient(100deg,#f7ecd0 0,#cfae6b 30%,#fff3cf 48%,#b8924d 68%,#f0d9a0 100%) 100% 0/220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:foil 4.5s 3s ease-in-out forwards}@keyframes foil{to{background-position:0 0}}.seal{position:absolute;z-index:1;right:5%;top:50%;width:min(280px,26vw);transform:translateY(-50%);color:var(--gold)}.seal .rot{transform-origin:100px 100px;animation:spin 60s linear infinite}.seal text{fill:currentColor;font:italic 500 11px var(--serif)}.seal .sc{font:300 40px var(--serif);fill:var(--gold2)}@keyframes spin{to{transform:rotate(360deg)}}
+.mq{overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(90deg,#190a24,var(--bg2),#190a24);padding:24px 0}.mq div{display:flex;width:max-content;animation:mq 55s linear infinite;font:italic 300 clamp(1.6rem,3.4vw,2.6rem)/1 var(--serif);color:var(--gold2);white-space:pre}@keyframes mq{to{transform:translateX(-50%)}}
+section{position:relative}section::before{content:'◆';position:absolute;top:-9px;left:50%;transform:translateX(-50%);padding:0 16px;background:var(--bg);color:var(--gold);font-size:13px;line-height:1}section h2{background:linear-gradient(180deg,#fff3cf,#cfae6b 65%,#9a7a3e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}.sub{font-size:1.12rem}#kort{background:radial-gradient(60% 70% at 90% 10%,rgba(91,22,48,.4),transparent 70%)}#edit{background:linear-gradient(180deg,var(--bg),#190a24 45%,#0d0b1d)}#check{background:radial-gradient(60% 60% at 10% 100%,rgba(207,174,107,.1),transparent 70%)}
+.fc,.box,.panel{position:relative;overflow:hidden;border:1px solid transparent;background:linear-gradient(160deg,#171c3c,#0d1128) padding-box,linear-gradient(135deg,#f0d9a0,rgba(207,174,107,.18) 40%,#cfae6b 70%,rgba(207,174,107,.3)) border-box}.fc::after,.box::after,.panel::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(280px circle at var(--mx,50%) var(--my,0),rgba(240,217,160,.16),transparent 65%)}.fc:hover::after,.box:hover::after,.panel:hover::after{opacity:1}
+.btn{position:relative;overflow:hidden;border:0;color:#1a1405;font-weight:500;background:linear-gradient(135deg,#f6e3ae,#cfae6b 50%,#a98443)}.btn:hover{background:linear-gradient(135deg,#fbedc4,#dcb978 50%,#b8924d);color:#1a1405}.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.6),transparent 70%);transform:translateX(-130%)}.btn:hover::after{transform:translateX(130%);transition:transform .8s}.fc a.btn{border:0}.tabs button[aria-selected=true]{background:linear-gradient(135deg,#f6e3ae,#cfae6b 55%,#a98443)}
+.quote{max-width:22ch;margin:100px auto 0;padding:0;border:0;text-align:center;font-size:clamp(2rem,5vw,3.8rem);background:linear-gradient(180deg,#fff3cf,#cfae6b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.quote::before{content:'“';display:block;font-size:6rem;line-height:.5;height:.4em;opacity:.7}ol.steps li::before{box-shadow:0 0 18px rgba(207,174,107,.35)}footer::before{content:'◆  ◆  ◆';display:block;color:var(--gold);margin-bottom:28px;letter-spacing:.6em}footer b{font-size:clamp(2rem,5vw,3.4rem);background:linear-gradient(180deg,#fff3cf,#cfae6b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+@media (max-width:800px){.seal{top:84px;right:14px;width:92px;transform:none;opacity:.6}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.strip .hookz{width:5%}.intro{display:none}}
+</style>
+</head>
+<body>
+<div class='intro' aria-hidden='true'><i></i><i></i><span>CG</span></div><div id='sp'></div><nav><div class="wrap"><b><span class='mono'>CG</span>Clipgids</b><a href="#bronnen">Bronnen</a><a href="#games">Games</a><a href="#kijken">Kijken</a><a href="#edit">Jouw edit</a><a href="#check">Eindcheck</a></div></nav>
+
+<header class="hero"><canvas id='dust' aria-hidden='true'></canvas><svg class='seal' viewBox='0 0 200 200' aria-hidden='true'><defs><path id='ring' d='M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0'/></defs><g class='rot'><text textLength='484' lengthAdjust='spacing'><textPath href='#ring'>De ultieme gaming-clip gids ◆ Editie 2026 ◆ Atelier voor editors ◆ </textPath></text></g><circle cx='100' cy='100' r='94' fill='none' stroke='currentColor' stroke-width='.6'/><circle cx='100' cy='100' r='62' fill='none' stroke='currentColor' stroke-width='.6'/><text class='sc' x='100' y='114' text-anchor='middle'>CG</text></svg><div class="wrap">
+<h1>De ultieme <em>gaming-clip</em> gids</h1>
+<p class="lead">Klikbare bronnen, kijktips en een editing-checklist voor clips van 30–60 seconden. Samengesteld op 17 november 2026.</p>
+<a class="btn" href="#bronnen">Ontdek de bronnen</a>
+<div class="strip" aria-label="De eerste 3 seconden van een clip">
+<div class="bar"><div class="hookz"></div></div>
+<div class="ticks"><span>0 sec · de hook</span><span>3 sec</span><span>20–45 sec · ideale lengte</span></div></div>
+</div></header>
+<div class='mq' aria-hidden='true'><div>Hook ◆ Knippunt ◆ Bewerking ◆ Lengte ◆ Eindcheck ◆ </div></div>
+
+<section id="kort"><div class="wrap">
+<h2>In het kort</h2>
+<p class="sub">Alle plekken waar je topclips van andere streamers vindt, plus precies waar je op let om dat te vertalen naar het knippen, monteren en editen van clips voor jouw YouTuber.</p>
+<div class="pillars">
+<div><h3>Kies</h3><p>Vijf clips uit de bronnen hieronder die je echt pakken.</p></div>
+<div><h3>Analyseer</h3><p>Gebruik de kijkchecklist: hook, knippunt, bewerking en lengte.</p></div>
+<div><h3>Kopieer de aanpak</h3><p>Niet de clip. Pas timing en stijl toe op jouw eigen materiaal.</p></div>
+</div>
+<p class="quote">Clips van 20–45 seconden die in de eerste 3 seconden pakken en direct na het hoogtepunt stoppen.</p>
+</div></section>
+
+<section id="bronnen"><div class="wrap">
+<h2>Alle bronnen</h2>
+<p class="sub">Begin bij de drie concrete clipplekken en werk daarna door naar de rest.</p>
+<div class="feat">
+<article class="fc"><span class="tag">Concrete clips · 30–60 seconden</span><h3>CaseOh: timing en funny moments</h3><p>Voorbeelden van 53 seconden tot ruim 1 minuut.</p><a class="btn" href="https://gridvids.com/caseoh-moments" target="_blank" rel="noopener">Bekijk CaseOh Moments</a></article>
+<article class="fc"><span class="tag">Concrete clips · 30–60 seconden</span><h3>Twitch gaming clips</h3><p>Onder andere clips van 0:47, 0:55 en 1:00.</p><a class="btn" href="https://clipsfinder.com/" target="_blank" rel="noopener">Open ClipsFinder</a></article>
+<article class="fc"><span class="tag">Concrete clips · 30–60 seconden</span><h3>LivestreamFails</h3><p>Echte momenten uit livestreams.</p><a class="btn" href="https://livestreamfails.com/" target="_blank" rel="noopener">Open LivestreamFails</a></article>
+</div>
+
+<h2 style="margin-top:110px;font-size:clamp(1.8rem,4vw,3rem)">Meer plekken om clips te bekijken</h2>
+<div class="more">
+<article><h3>Twitch Clips</h3><p>Filter per game op “Meest bekeken” en “Afgelopen week”. Let op waar de clip begint en eindigt.</p><div class="l"><a href="https://www.twitch.tv/directory" target="_blank" rel="noopener">twitch.tv/directory</a></div></article>
+<article><h3>YouTube Shorts</h3><p>Zoek op de naam van een streamer plus “shorts”. Let op ondertitels, zooms en geluidseffecten.</p><div class="l"><a href="https://www.youtube.com/shorts" target="_blank" rel="noopener">youtube.com/shorts</a></div></article>
+<article><h3>TikTok</h3><p>Zie hoe de eerste 2 seconden een kijker vasthouden.</p><div class="l"><a href="https://www.tiktok.com/tag/gamingclips" target="_blank" rel="noopener">#gamingclips</a><a href="https://www.tiktok.com/tag/streamerclips" target="_blank" rel="noopener">#streamerclips</a></div></article>
+<article><h3>Reddit</h3><p>De beste clips van de week.</p><div class="l"><a href="https://www.reddit.com/r/LivestreamFail/" target="_blank" rel="noopener">r/LivestreamFail</a><a href="https://www.reddit.com/r/Twitch/" target="_blank" rel="noopener">r/Twitch</a><a href="https://www.reddit.com/search/?q=gaming%20clips" target="_blank" rel="noopener">zoeken op “gaming clips”</a></div></article>
+<article><h3>Kick Clips</h3><p>Steeds meer streamers zetten hier hun beste momenten neer.</p><div class="l"><a href="https://kick.com/" target="_blank" rel="noopener">kick.com</a></div></article>
+<article><h3>Medal.tv</h3><p>Grote verzameling korte gamingclips, per game te filteren.</p><div class="l"><a href="https://medal.tv/" target="_blank" rel="noopener">medal.tv</a></div></article>
+<article><h3>Streamable</h3><p>Veel clips uit Reddit-posts staan hier. Handig om snel te scrollen.</p><div class="l"><a href="https://streamable.com/" target="_blank" rel="noopener">streamable.com</a></div></article>
+</div>
+</div></section>
+
+<section id="games"><div class="wrap">
+<h2>Snelkoppelingen per game</h2>
+<p class="sub">Welke game speelt jouw YouTuber? Kies hem en open direct de zoekopdrachten.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="panels"></div>
+</div></section>
+
+<section id="kijken"><div class="wrap">
+<h2>Zo kijk je als editor</h2>
+<p class="sub">Bekijk elke clip twee keer: één keer als kijker, één keer als editor.</p>
+<div class="four">
+<div><h3>Hook</h3><p>Wat gebeurt er in de eerste 3 seconden?</p></div>
+<div><h3>Knippunt</h3><p>Waar stopt de clip: direct na de grap of met een korte nasleep?</p></div>
+<div><h3>Bewerking</h3><p>Zoom-ins, ondertitels, geluidseffecten en slow-motion.</p></div>
+<div><h3>Lengte</h3><p>De beste clips zijn vaak 20–45 seconden, niet langer dan nodig.</p></div>
+</div>
+<div class="two">
+<div class="box"><h3>Kijknotitie</h3>
+<label for="n1">Link</label><input id="n1">
+<label for="n2">Game en streamer</label><input id="n2">
+<label for="n3">Lengte</label><input id="n3">
+<label for="n4">Hook (eerste 3 seconden)</label><input id="n4">
+<label for="n5">Knippunt</label><input id="n5">
+<label for="n6">Bewerking (zoom, tekst, geluid)</label><input id="n6">
+<label for="n7">Wat neem ik over</label><textarea id="n7"></textarea>
+<div class="row"><button class="btn" id="copyN">Kopieer notitie</button><span class="note" id="noteMsg"></span></div></div>
+<div class="box"><h3>Lengtemeter</h3>
+<p class="note">Sleep naar de lengte van jouw clip.</p>
+<div class="meter"><span id="sec">32</span> sec</div>
+<div class="zones"><i style="width:28.6%;background:#5b1630"></i><i style="width:35.7%;background:var(--gold2)"></i><i style="width:21.4%;background:var(--gold)"></i><i style="width:14.3%;background:#5b1630"></i></div>
+<input type="range" id="rng" min="0" max="70" value="32" aria-label="Clipduur in seconden">
+<p id="verdict" style="margin:14px 0 0"></p></div>
+</div>
+</div></section>
+
+<section id="edit"><div class="wrap">
+<h2>Van inspiratie naar jouw edit</h2>
+<p class="sub">Vijf stappen, in deze volgorde.</p>
+<ol class="steps">
+<li><h3>Ruwe knip</h3><p>Haal stiltes en omwegen weg en laat alleen het moment over.</p></li>
+<li><h3>Hook eerst</h3><p>Begin zo dicht mogelijk bij het moment waar het gebeurt.</p></li>
+<li><h3>Versterk</h3><p>Zoom-ins op de piekmomenten, ondertitels en een paar gerichte geluidseffecten.</p></li>
+<li><h3>Eindig scherp</h3><p>Stop vlak na de punchline of reactie.</p></li>
+<li><h3>Vergelijk</h3><p>Leg jouw versie naast je favoriete voorbeeldclip en check hook, tempo en lengte.</p></li>
+</ol>
+</div></section>
+
+<section id="check"><div class="wrap">
+<div class="two">
+<div><h2>Eindcheck</h2><p class="sub">Vink af voordat je exporteert.</p>
+<ul class="chk" id="chk"></ul>
+<div class="prog"><i id="bar"></i></div><p class="note" id="pc">0 van 6 afgevinkt</p></div>
+<div class="box" id="yt"><h3>Jouw YouTuber</h3>
+<label for="y1">Game</label><input id="y1" data-k="game">
+<label for="y2">Stijl</label><input id="y2" data-k="stijl">
+<label for="y3">Favoriete voorbeeldclips (plak hier de links)</label><textarea id="y3" data-k="links"></textarea>
+<label for="y4">Doellengte</label><input id="y4" data-k="doel">
+<p class="note" style="margin-top:16px">Je invoer blijft bewaard in deze browser.</p></div>
+</div>
+</div></section>
+
+<section id="weten"><div class="wrap">
+<h2>Goed om te weten</h2><br>
+<div class="know">
+<p>Gebruik deze clips als inspiratie en hergebruik ze niet zonder toestemming van de maker.</p>
+<p>Sites en filters veranderen soms. Werkt een link niet meer, zoek de naam dan op in Google of in de zoekbalk van het platform.</p>
+<p>De eerste drie links komen uit de oorspronkelijke lijst; de tracking-code is eruit gehaald.</p>
+</div>
+</div></section>
+
+<footer><div class="wrap"><b>Kopieer de aanpak, niet de clip.</b>De Ultieme Gaming-Clip Inspiratiegids · 17 november 2026</div></footer>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var games=[["Minecraft","minecraft","minecraft"],["Fortnite","fortnite","fortnite"],["GTA 5","gta+5","grand-theft-auto-v"],["Roblox","roblox","roblox"]];
+var tabs=$("tabs"),pn=$("panels");
+games.forEach(function(g,i){
+ var b=document.createElement("button");b.textContent=g[0];b.setAttribute("role","tab");b.setAttribute("aria-selected",i==0);tabs.appendChild(b);
+ var p=document.createElement("div");p.className="panel"+(i==0?" on":"");
+ p.innerHTML='<h3>'+g[0]+'</h3><div class="acts"><a class="btn" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query='+g[1]+'+clips+shorts">Shorts zoeken</a><a class="btn" target="_blank" rel="noopener" href="https://www.twitch.tv/directory/category/'+g[2]+'">Twitch-categorie</a></div>';
+ pn.appendChild(p);
+ b.onclick=function(){[].forEach.call(tabs.children,function(x,j){x.setAttribute("aria-selected",j==i);pn.children[j].className="panel"+(j==i?" on":"")})};
+});
+var ids=["n1","n2","n3","n4","n5","n6","n7"],lab=["Link","Game en streamer","Lengte","Hook (eerste 3 seconden)","Knippunt","Bewerking (zoom, tekst, geluid)","Wat neem ik over"];
+$("copyN").onclick=function(){
+ var t=ids.map(function(d,i){return lab[i]+": "+$(d).value}).join("\n");
+ var m=$("noteMsg");
+ try{navigator.clipboard.writeText(t).then(function(){m.textContent="Gekopieerd."},function(){m.textContent="Kopiëren is niet gelukt. Selecteer de tekst handmatig."})}catch(e){m.textContent="Kopiëren is niet gelukt. Selecteer de tekst handmatig."}
+};
+var r=$("rng");
+function v(){var s=+r.value,t;$("sec").textContent=s;
+ if(s<20)t="Aan de korte kant. Check of het moment genoeg ruimte heeft.";
+ else if(s<=45)t="In de roos. Dit is de ideale lengte van 20–45 seconden.";
+ else if(s<=60)t="Nog goed, maar kan het korter? Niet langer dan nodig.";
+ else t="Te lang. Het maximum is 60 seconden.";
+ $("verdict").textContent=t}
+r.oninput=v;v();
+var items=["Hook binnen 3 seconden","Stiltes en omwegen eruit","Zoom of tekst op het piekmoment","Geluidseffecten spaarzaam en passend","Einde direct na de punchline","Totale lengte 20–45 seconden, maximaal 60"],ul=$("chk");
+var saved={};try{saved=JSON.parse(localStorage.getItem("clipgids-chk")||"{}")}catch(e){}
+function pr(){var c=ul.querySelectorAll("input:checked").length;$("bar").style.width=(c/items.length*100)+"%";
+ $("pc").textContent=c==items.length?"Alles afgevinkt. Klaar om te exporteren.":c+" van "+items.length+" afgevinkt";
+ var o={};[].forEach.call(ul.querySelectorAll("input"),function(x,i){o[i]=x.checked});try{localStorage.setItem("clipgids-chk",JSON.stringify(o))}catch(e){}}
+items.forEach(function(t,i){var li=document.createElement("li");li.innerHTML='<label><input type="checkbox"><span>'+t+'</span></label>';
+ var cb=li.querySelector("input");cb.checked=!!saved[i];cb.onchange=pr;ul.appendChild(li)});pr();
+var ys=document.querySelectorAll("#yt [data-k]");
+[].forEach.call(ys,function(el){var k="clipgids-"+el.dataset.k;try{el.value=localStorage.getItem(k)||""}catch(e){}
+ el.oninput=function(){try{localStorage.setItem(k,el.value)}catch(e){}}});
+})();
+(function(){
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,sp=document.getElementById('sp');
+function sc(){var m=document.documentElement.scrollHeight-innerHeight;sp.style.width=(m>0?scrollY/m*100:0)+'%'}
+addEventListener('scroll',sc,{passive:true});sc();
+document.querySelectorAll('.fc,.box,.panel').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')})});
+var m=document.querySelector('.mq div');if(m){var s=m.textContent.repeat(3);m.innerHTML='<span>'+s+'</span><span>'+s+'</span>'}
+var cv=document.getElementById('dust');if(!cv||rm)return;
+var x=cv.getContext('2d'),P=[],W,H;
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}
+rs();addEventListener('resize',rs);
+for(var i=0;i<70;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.6+.4,v:Math.random()*.00025+.00008,a:Math.random()*6.28});
+(function f(){requestAnimationFrame(f);if(scrollY>1200)return;x.clearRect(0,0,W,H);
+P.forEach(function(p){p.y-=p.v;p.a+=.02;if(p.y<0){p.y=1;p.x=Math.random()}x.globalAlpha=.25+.55*Math.abs(Math.sin(p.a));x.fillStyle='#f0d9a0';x.beginPath();x.arc(p.x*W+Math.sin(p.a*.5)*6,p.y*H,p.r,0,6.283);x.fill()})})();
+})();
+</script>
+</body>
+</html>
